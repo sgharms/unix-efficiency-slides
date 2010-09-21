@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Slides</title>
+	<link href="./stylesheets/slides.css" media="screen" rel="stylesheet" charset="utf-8" type="text/css" />
+	<link href="./stylesheets/syntax_friendly.css" media="screen" rel="stylesheet" charset="utf-8" type="text/css" />
+  <script src="./javascripts/jquery.min.js" type="text/javascript"></script>
+  <script src="./javascripts/jquery.easing.js" type="text/javascript"></script>
+  <script src="./javascripts/jquery.hash-changed.js" type="text/javascript"></script>
+  <script src="./javascripts/slides.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="slides">
+		<div id="track">
+			
+				<div class="cover">
+          <div title="Unix Efficiency!" id="slide-0" class="content">
+						<h1>Unix Efficiency</h1>
+<h2>Steven G. Harms</h2>
+<h2>(stharms@cisco.com)</h2>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-1" class="content">
+						<h1>I dislike inefficiency.</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-2" class="content">
+						<h1>Proof:</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-3" class="content">
+						<h1>Dvorak Keyboard<br />
+<img src="http://stevengharms.com" title="Dvorak Keyboard" alt="Dvorak Keyboard" /></h1>
+<ul>
+	<li>1.5 miles for your fingers Dvorak v. <span class="caps">QWERTY</span></li>
+	<li>The shortcut that gets you home</li>
+</ul>
+<li>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-4" class="content">
+						<h1>Infficiency Hurts over the Long-Term</h1>
+<p>&#8230;add up all those minuscule inefficiencies that you do tens, hundreds, thousands of time per day and the results are surprising</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-5" class="content">
+						<h1>It hurts every day</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-6" class="content">
+						<h1>And it never stops hurting</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-7" class="content">
+						<h1>Cisco</h1>
+<ul>
+	<li>Started in engineering support, lotta typing, lotta XTerm (er, dtterm)</li>
+	<li>Sysadmin for email team: lotta typing, searching, saving bits of text</li>
+	<li>Terminal addict</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-8" class="content">
+						<p>Some magic spells that will help you shave off time from your regular <span class="caps">CLI</span> usage</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-9" class="content">
+						<h1>Measurement</h1>
+<blockquote>
+<p>wc (-c|-l) (word count, count the bytes / lines)</p>
+</blockquote>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-10" class="content">
+						<h1>Use a decent shell (bash, zsh)</h1>
+<ul>
+	<li>Your shell is, in fact, a debugger session with a breakpoint at each carriage return</li>
+	<li>You do this in $PROGRAMMING_LANG all day, do it in the shell, too</li>
+	<li>Something that has key-bindings (set -o emacs, set -o vi)</li>
+	<li>Something that uses the <span class="caps">TAB</span> key to expand paths, at the least</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-11" class="content">
+						<h1>Take advantage of shell built-in variables</h1>
+<ul>
+	<li>~ (home)</li>
+	<li>Set a variable for places you need to go often ($TC_HOME)</li>
+	<li>Stack variables for maximum flexibility ($TC_BIN=$TC_HOME/bin)</li>
+	<li>!! (Previous command line)</li>
+	<li>!$ (Previous command&#8217;s arguments)</li>
+	<li>$* (The arguments)</li>
+	<li># (store something to recall later!  Handy for cut and pasting)</li>
+	<li>!(match) &#8211; execute a historical command that started with (match)</li>
+	<li>Advanced:  Execute a subshell and insert its result: ``</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-12" class="content">
+						<h1>Use &#8216;cd&#8217; properly (in bash)</h1>
+<ul>
+	<li>cd (go home)</li>
+	<li>cd ~/bin (go to $<span class="caps">HOME</span>/bin)</li>
+	<li>cd .. (go up a directory)</li>
+	<li>cd ../../.. (go up three directories)</li>
+	<li>cd &#8211; (go to the last directory, as a toggle)</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-13" class="content">
+						<h1>Create bash functions to do work you need to do often</h1>
+<ul>
+	<li>Remember, you&#8217;re in a debugger + console.  Create functions to speed things up <em>at the command line</em></li>
+	<li>Simple functions may be better expressed as an alias</li>
+	<li>Combine functions with built-in variables</li>
+</ul>
+<div class="code">function zazzle(){ echo &#8220;A zazzle is summoned!&#8221; }<br/>
+alias ll=&#8220;ls -l&#8221;</div>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-14" class="content">
+						<h1>Use awk to extract columnar data</h1>
+<ul>
+	<li>ls -l |awk &#8216;{print $5}&#8217; # print the 5th column, file sizes</li>
+	<li>Use simple sed to do simple tranforms</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-15" class="content">
+						<h1>Use pagers, or pager-like things properly</h1>
+<ul>
+	<li>more</li>
+	<li>more sucks, use less [use an alias?]</li>
+	<li>head (gets the top five rows in a list)</li>
+	<li>tail (gets the last five rows in a list)</li>
+	<li>sort</li>
+	<li>uniq</li>
+	<li>sort + uniq == Unique results</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-16" class="content">
+						<h1>Use grep properly</h1>
+<ul>
+	<li>Basic:  grep something a_file</li>
+	<li>Try grepping case insensitively -i</li>
+	<li>Print out the file name that had a winner if you use a wildcard e.g. grep -iH zazzle *</li>
+	<li>Get the line number where the match was found (-n)</li>
+	<li>grep -v to exclude things</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-17" class="content">
+						<h1>Find a file from where you are</h1>
+<h2>&#8220;I know it&#8217;s here somewhere&#8230;&#8221;</h2>
+<ul>
+	<li>find . -name &#8220;*.java&#8221;</li>
+	<li>Advanced:  Use -exec to do something to the result&#8230;.<br />
+	find . -name &#8220;*.java&#8221; -exec ls -l {} \;</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-18" class="content">
+						<h1>Change a file&#8217;s contents</h1>
+<ul>
+	<li>and print it out&#8230;. perl -pe &#8216;s#foo#bar#g&#8217; file.txt</li>
+	<li>and change it in the file&#8230;perl -i -pe &#8216;s#foo#bar#g&#8217; file.txt # this is silent!</li>
+	<li>Gives you the full power of perl&#8217;s regex engine (same as Python, Ruby, not same as emacs!)</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-19" class="content">
+						<h1>Transform a columnar list into a single row</h1>
+<ul>
+	<li>xargs</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-20" class="content">
+						<h1>Eponentiate power with &#8220;|&#8221;</h1>
+<ol>
+	<li>&#8220;Find all the java files&#8221;</li>
+	<li>&#8220;Find all the java files that contain the word package&#8221;</li>
+	<li>&#8220;Find all the java files that contain the word package, case insensitively, and find the size of that file&#8221;</li>
+</ol>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-21" class="content">
+						<h1>Bonus:  Use vi properly</h1>
+<h4>When I see improper &#8216;vi&#8217; use I die a little inside</h4>
+<h4>Use &#8216;vim&#8217; (alias vi to vim!)</h4>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-22" class="content">
+						<ul>
+	<li>vi (file)</li>
+	<li>vi +32 (file) edit, starting at line 32</li>
+	<li>Go to the start/end (gg/G)</li>
+	<li>Start typing at a line under this one: o</li>
+	<li>Start typing at a line above this one: O</li>
+	<li>Go to the start/end of a line (^/$)</li>
+	<li>Go to line 33:  33G</li>
+	<li>Go forward a word (w)</li>
+	<li>Do something n-times (n[something])</li>
+	<li>Write macros to do complex work (qa: to create a macro, @a to run macro &#8216;a&#8217;)</li>
+</ul>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-23" class="content">
+						<p>If it takes you more than 3 keystrokes, you&#8217;re probably doing it wrong</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-24" class="content">
+						<h1>Use screen</h1>
+<h2>Get the power of many terminals in one, leave terminals resident</h2>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-25" class="content">
+						<p>When you sense that there&#8217;s &#8220;gotta be a better way&#8221; invest in efficiency.  Life is too short for bad process.</p>
+					</div>
+				</div>
+			
+		</div>
+	</div>
+</body>
+</html>
