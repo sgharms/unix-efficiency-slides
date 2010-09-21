@@ -40,18 +40,17 @@
 				<div class="">
           <div title="" id="slide-3" class="content">
 						<h1>Dvorak Keyboard<br />
-<img src="http://stevengharms.com" title="Dvorak Keyboard" alt="Dvorak Keyboard" /></h1>
+<img src="http://stevengharms.com/wp-content/uploads/2007/04/dvorak.gif" title="Dvorak Keyboard" alt="Dvorak Keyboard" /></h1>
 <ul>
 	<li>1.5 miles for your fingers Dvorak v. <span class="caps">QWERTY</span></li>
 	<li>The shortcut that gets you home</li>
 </ul>
-<li>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-4" class="content">
-						<h1>Infficiency Hurts over the Long-Term</h1>
+						<h1>Inefficiency Hurts over the Long-Term</h1>
 <p>&#8230;add up all those minuscule inefficiencies that you do tens, hundreds, thousands of time per day and the results are surprising</p>
 					</div>
 				</div>
@@ -64,13 +63,13 @@
 			
 				<div class="">
           <div title="" id="slide-6" class="content">
-						<h1>And it never stops hurting</h1>
+						<h1>&#8230;And it never stops hurting</h1>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-7" class="content">
-						<h1>Cisco</h1>
+						<h1>Cisco Career</h1>
 <ul>
 	<li>Started in engineering support, lotta typing, lotta XTerm (er, dtterm)</li>
 	<li>Sysadmin for email team: lotta typing, searching, saving bits of text</li>
@@ -110,15 +109,15 @@
           <div title="" id="slide-11" class="content">
 						<h1>Take advantage of shell built-in variables</h1>
 <ul>
-	<li>~ (home)</li>
+	<li><strong>~</strong> (home)</li>
 	<li>Set a variable for places you need to go often ($TC_HOME)</li>
 	<li>Stack variables for maximum flexibility ($TC_BIN=$TC_HOME/bin)</li>
-	<li>!! (Previous command line)</li>
-	<li>!$ (Previous command&#8217;s arguments)</li>
-	<li>$* (The arguments)</li>
-	<li># (store something to recall later!  Handy for cut and pasting)</li>
-	<li>!(match) &#8211; execute a historical command that started with (match)</li>
-	<li>Advanced:  Execute a subshell and insert its result: ``</li>
+	<li><strong>!!</strong> (Previous command line)</li>
+	<li><strong>!$</strong> (Previous command&#8217;s arguments)</li>
+	<li><strong>$</strong>* (The arguments)</li>
+	<li><strong>#</strong> (store something to recall later!  Handy for cut and pasting)</li>
+	<li><strong>!(match)</strong> &#8211; execute a historical command that started with (match)</li>
+	<li>Advanced:  Execute a subshell and insert its result: <strong>``</strong></li>
 </ul>
 					</div>
 				</div>
@@ -127,11 +126,11 @@
           <div title="" id="slide-12" class="content">
 						<h1>Use &#8216;cd&#8217; properly (in bash)</h1>
 <ul>
-	<li>cd (go home)</li>
-	<li>cd ~/bin (go to $<span class="caps">HOME</span>/bin)</li>
-	<li>cd .. (go up a directory)</li>
-	<li>cd ../../.. (go up three directories)</li>
-	<li>cd &#8211; (go to the last directory, as a toggle)</li>
+	<li><strong>cd</strong> (go home)</li>
+	<li><strong>cd ~/bin</strong> (go to $<span class="caps">HOME</span>/bin)</li>
+	<li><strong>cd ..</strong> (go up a directory)</li>
+	<li><strong>cd ../../..</strong> (go up three directories)</li>
+	<li><strong>cd -</strong> (go to the last directory, as a toggle)</li>
 </ul>
 					</div>
 				</div>
@@ -153,9 +152,11 @@ alias ll=&#8220;ls -l&#8221;</div>
           <div title="" id="slide-14" class="content">
 						<h1>Use awk to extract columnar data</h1>
 <ul>
-	<li>ls -l |awk &#8216;{print $5}&#8217; # print the 5th column, file sizes</li>
+	<li>print the 5th column, file sizes</li>
 	<li>Use simple sed to do simple tranforms</li>
 </ul>
+<div class="code">ls -l | awk &#8216;{print $5}&#8217;<br />
+ls | sed s/xml/<span class="caps">XML</span>/</div>
 					</div>
 				</div>
 			
@@ -163,12 +164,12 @@ alias ll=&#8220;ls -l&#8221;</div>
           <div title="" id="slide-15" class="content">
 						<h1>Use pagers, or pager-like things properly</h1>
 <ul>
-	<li>more</li>
-	<li>more sucks, use less [use an alias?]</li>
-	<li>head (gets the top five rows in a list)</li>
-	<li>tail (gets the last five rows in a list)</li>
-	<li>sort</li>
-	<li>uniq</li>
+	<li><strong>more</strong></li>
+	<li><strong>more</strong> sucks, use <strong>less</strong> [use an alias?]</li>
+	<li><strong>head</strong> (gets the top five rows in a list)</li>
+	<li><strong>tail</strong> (gets the last five rows in a list)</li>
+	<li><strong>sort</strong></li>
+	<li><strong>uniq</strong></li>
 	<li>sort + uniq == Unique results</li>
 </ul>
 					</div>
@@ -178,7 +179,7 @@ alias ll=&#8220;ls -l&#8221;</div>
           <div title="" id="slide-16" class="content">
 						<h1>Use grep properly</h1>
 <ul>
-	<li>Basic:  grep something a_file</li>
+	<li>Basic:  <strong>grep something a_file</strong></li>
 	<li>Try grepping case insensitively -i</li>
 	<li>Print out the file name that had a winner if you use a wildcard e.g. grep -iH zazzle *</li>
 	<li>Get the line number where the match was found (-n)</li>
@@ -192,7 +193,7 @@ alias ll=&#8220;ls -l&#8221;</div>
 						<h1>Find a file from where you are</h1>
 <h2>&#8220;I know it&#8217;s here somewhere&#8230;&#8221;</h2>
 <ul>
-	<li>find . -name &#8220;*.java&#8221;</li>
+	<li><strong>find . -name &quot;</strong>.java&quot;*</li>
 	<li>Advanced:  Use -exec to do something to the result&#8230;.<br />
 	find . -name &#8220;*.java&#8221; -exec ls -l {} \;</li>
 </ul>
@@ -221,7 +222,7 @@ alias ll=&#8220;ls -l&#8221;</div>
 			
 				<div class="">
           <div title="" id="slide-20" class="content">
-						<h1>Eponentiate power with &#8220;|&#8221;</h1>
+						<h1>Exponentiate power with &#8220;|&#8221;</h1>
 <ol>
 	<li>&#8220;Find all the java files&#8221;</li>
 	<li>&#8220;Find all the java files that contain the word package&#8221;</li>

@@ -15,7 +15,7 @@ h1.  Proof:
 
 !SLIDE
 h1.  Dvorak Keyboard
-!http://stevengharms.com(Dvorak Keyboard)!
+!http://stevengharms.com/wp-content/uploads/2007/04/dvorak.gif(Dvorak Keyboard)!
 
 * 1.5 miles for your fingers Dvorak v. QWERTY
 * The shortcut that gets you home
@@ -35,7 +35,7 @@ h1.  It hurts every day
 h1.  ...And it never stops hurting
 
 !SLIDE
-h1. Cisco
+h1. Cisco Career
 
 * Started in engineering support, lotta typing, lotta XTerm (er, dtterm)
 * Sysadmin for email team: lotta typing, searching, saving bits of text
@@ -64,25 +64,25 @@ h1.  Use a decent shell (bash, zsh)
 
 h1.  Take advantage of shell built-in variables
 
-* ~ (home)
+* *~* (home)
 * Set a variable for places you need to go often ($TC_HOME)
 * Stack variables for maximum flexibility ($TC_BIN=$TC_HOME/bin)
-* !! (Previous command line)
-* !$ (Previous command's arguments)
-* $* (The arguments)
-* # (store something to recall later!  Handy for cut and pasting) 
-* !(match) - execute a historical command that started with (match)
-* Advanced:  Execute a subshell and insert its result: ``
+* *!!* (Previous command line)
+* *!$* (Previous command's arguments)
+* *$** (The arguments)
+* *#* (store something to recall later!  Handy for cut and pasting) 
+* *!(match)* - execute a historical command that started with (match)
+* Advanced:  Execute a subshell and insert its result: *``*
 
 !SLIDE
 
 h1.  Use 'cd' properly (in bash)
 
-* cd (go home)
-* cd ~/bin (go to $HOME/bin)
-* cd .. (go up a directory)
-* cd ../../.. (go up three directories)
-* cd - (go to the last directory, as a toggle)
+* *cd* (go home)
+* *cd ~/bin* (go to $HOME/bin)
+* *cd ..* (go up a directory)
+* *cd ../../..* (go up three directories)
+* *cd -* (go to the last directory, as a toggle)
 
 !SLIDE
 
@@ -101,26 +101,30 @@ alias ll="ls -l"</div>
 
 h1.  Use awk to extract columnar data
 
-* ls -l |awk '{print $5}' * print the 5th column, file sizes
+* print the 5th column, file sizes
 * Use simple sed to do simple tranforms
+
+<div class="code">ls -l | awk '{print $5}'
+ls | sed s/xml/XML/
+</div>
 
 !SLIDE
 
 h1.  Use pagers, or pager-like things properly
 
-* more
-* more sucks, use less [use an alias?]
-* head (gets the top five rows in a list)
-* tail (gets the last five rows in a list)
-* sort
-* uniq
+* *more*
+* *more* sucks, use *less* [use an alias?]
+* *head* (gets the top five rows in a list)
+* *tail* (gets the last five rows in a list)
+* *sort*
+* *uniq*
 * sort + uniq == Unique results
 
 !SLIDE
 
 h1.  Use grep properly
 
-* Basic:  grep something a_file
+* Basic:  *grep something a_file*
 * Try grepping case insensitively -i
 * Print out the file name that had a winner if you use a wildcard e.g. grep -iH zazzle *
 * Get the line number where the match was found (-n)
@@ -132,7 +136,7 @@ h1.  Find a file from where you are
 
 h2.  "I know it's here somewhere..."
 
-* find . -name "*.java"
+* *find . -name "*.java"*
 * Advanced:  Use -exec to do something to the result....
 	find . -name "*.java" -exec ls -l {} \;
 	
@@ -152,7 +156,7 @@ h1.  Transform a columnar list into a single row
 
 !SLIDE
 
-h1.  Eponentiate power with "|"
+h1.  Exponentiate power with "|"
 
 # "Find all the java files"
 # "Find all the java files that contain the word package"
