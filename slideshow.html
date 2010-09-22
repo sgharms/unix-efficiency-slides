@@ -33,60 +33,78 @@
 			
 				<div class="">
           <div title="" id="slide-2" class="content">
-						<h1>Proof:</h1>
+						<h1 style="text-align:center;">Proof:</h1>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-3" class="content">
-						<h1>Dvorak Keyboard<br />
-<img src="http://stevengharms.com/wp-content/uploads/2007/04/dvorak.gif" title="Dvorak Keyboard" alt="Dvorak Keyboard" /></h1>
-<ul>
-	<li>1.5 miles for your fingers Dvorak v. <span class="caps">QWERTY</span></li>
-	<li>The shortcut that gets you home</li>
-</ul>
+						<h1 style="text-align:center;">Dvorak Keyboard</h1>
+<p style="text-align:center;"><img src="http://stevengharms.com/wp-content/uploads/2007/04/dvorak.gif" title="Dvorak Keyboard" alt="Dvorak Keyboard" /></p>
+<p>Notice the vowels under your left hand home row and the &#8220;Wheel of Fortune&#8221; consonants under your right?</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-4" class="content">
-						<h1>Inefficiency Hurts over the Long-Term</h1>
-<p>&#8230;add up all those minuscule inefficiencies that you do tens, hundreds, thousands of time per day and the results are surprising</p>
+						<p>What about the shortcut home that gets you home <i>just 5 minutes</i> faster?</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-5" class="content">
-						<h1>It hurts every day</h1>
+						<h1>Inefficiency Hurts over the Long-Term</h1>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-6" class="content">
-						<h1>&#8230;And it never stops hurting</h1>
+						<p>It hurts every day</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-7" class="content">
-						<h1>Cisco Career</h1>
-<ul>
-	<li>Started in engineering support, lotta typing, lotta XTerm (er, dtterm)</li>
-	<li>Sysadmin for email team: lotta typing, searching, saving bits of text</li>
-	<li>Terminal addict</li>
-</ul>
+						<p>&#8230;And it never stops hurting</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-8" class="content">
-						<p>Some magic spells that will help you shave off time from your regular <span class="caps">CLI</span> usage</p>
+						<p>&#8230;add up all those minuscule inefficiencies that you do tens, hundreds, thousands of time per day and the results are surprising</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-9" class="content">
+						<h1>My Cisco Career Has Involved a Lot of Typing</h1>
+<p>Doing it wrong over a an extended time period means <i>days</i> of life lost, seriously.</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-10" class="content">
+						<p>Started in engineering support, lotta typing, lotta XTerm (er, dtterm)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-11" class="content">
+						<p>Sysadmin for email team: lotta typing, searching, saving bits of text</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-12" class="content">
+						<h1>Sharing is Caring</h1>
+<p>Here are some magic spells that will help you shave off time from your regular <span class="caps">CLI</span> usage</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-13" class="content">
 						<h1>Measurement</h1>
+<p>When you need to measure how many characters you counted, use <strong>wc</strong>:</p>
 <blockquote>
 <p>wc (-c|-l) (word count, count the bytes / lines)</p>
 </blockquote>
@@ -94,184 +112,489 @@
 				</div>
 			
 				<div class="">
-          <div title="" id="slide-10" class="content">
-						<h1>Use a decent shell (bash, zsh)</h1>
-<ul>
-	<li>Your shell is, in fact, a debugger session with a breakpoint at each carriage return</li>
-	<li>You do this in $PROGRAMMING_LANG all day, do it in the shell, too</li>
-	<li>Something that has key-bindings (set -o emacs, set -o vi)</li>
-	<li>Something that uses the <span class="caps">TAB</span> key to expand paths, at the least</li>
-</ul>
-					</div>
-				</div>
-			
-				<div class="">
-          <div title="" id="slide-11" class="content">
-						<h1>Take advantage of shell built-in variables</h1>
-<ul>
-	<li><strong>~</strong> (home)</li>
-	<li>Set a variable for places you need to go often ($TC_HOME)</li>
-	<li>Stack variables for maximum flexibility ($TC_BIN=$TC_HOME/bin)</li>
-	<li><strong>!!</strong> (Previous command line)</li>
-	<li><strong>!$</strong> (Previous command&#8217;s arguments)</li>
-	<li><strong>$</strong>* (The arguments)</li>
-	<li><strong>#</strong> (store something to recall later!  Handy for cut and pasting)</li>
-	<li><strong>!(match)</strong> &#8211; execute a historical command that started with (match)</li>
-	<li>Advanced:  Execute a subshell and insert its result: <strong>``</strong></li>
-</ul>
-					</div>
-				</div>
-			
-				<div class="">
-          <div title="" id="slide-12" class="content">
-						<h1>Use &#8216;cd&#8217; properly (in bash)</h1>
-<ul>
-	<li><strong>cd</strong> (go home)</li>
-	<li><strong>cd ~/bin</strong> (go to $<span class="caps">HOME</span>/bin)</li>
-	<li><strong>cd ..</strong> (go up a directory)</li>
-	<li><strong>cd ../../..</strong> (go up three directories)</li>
-	<li><strong>cd -</strong> (go to the last directory, as a toggle)</li>
-</ul>
-					</div>
-				</div>
-			
-				<div class="">
-          <div title="" id="slide-13" class="content">
-						<h1>Create bash functions to do work you need to do often</h1>
-<ul>
-	<li>Remember, you&#8217;re in a debugger + console.  Create functions to speed things up <em>at the command line</em></li>
-	<li>Simple functions may be better expressed as an alias</li>
-	<li>Combine functions with built-in variables</li>
-</ul>
-<div class="code">function zazzle(){ echo &#8220;A zazzle is summoned!&#8221; }<br/>
-alias ll=&#8220;ls -l&#8221;</div>
-					</div>
-				</div>
-			
-				<div class="">
           <div title="" id="slide-14" class="content">
-						<h1>Use awk to extract columnar data</h1>
-<ul>
-	<li>print the 5th column, file sizes</li>
-	<li>Use simple sed to do simple tranforms</li>
-</ul>
-<div class="code">ls -l | awk &#8216;{print $5}&#8217;<br />
-ls | sed s/xml/<span class="caps">XML</span>/</div>
+						<h1>Secret 1:  Use a decent shell (bash, zsh)</h1>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-15" class="content">
-						<h1>Use pagers, or pager-like things properly</h1>
-<ul>
-	<li><strong>more</strong></li>
-	<li><strong>more</strong> sucks, use <strong>less</strong> [use an alias?]</li>
-	<li><strong>head</strong> (gets the top five rows in a list)</li>
-	<li><strong>tail</strong> (gets the last five rows in a list)</li>
-	<li><strong>sort</strong></li>
-	<li><strong>uniq</strong></li>
-	<li>sort + uniq == Unique results</li>
-</ul>
+						<p>Your shell is, in fact, a debugger session with a breakpoint at each carriage return.</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-16" class="content">
-						<h1>Use grep properly</h1>
-<ul>
-	<li>Basic:  <strong>grep something a_file</strong></li>
-	<li>Try grepping case insensitively -i</li>
-	<li>Print out the file name that had a winner if you use a wildcard e.g. grep -iH zazzle *</li>
-	<li>Get the line number where the match was found (-n)</li>
-	<li>grep -v to exclude things</li>
-</ul>
+						<p>You do this in pre. <code>$PROGRAMMING_LANG</code> all day, do it in the shell, too</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-17" class="content">
-						<h1>Find a file from where you are</h1>
-<h2>&#8220;I know it&#8217;s here somewhere&#8230;&#8221;</h2>
-<ul>
-	<li><strong>find . -name &quot;</strong>.java&quot;*</li>
-	<li>Advanced:  Use -exec to do something to the result&#8230;.<br />
-	find . -name &#8220;*.java&#8221; -exec ls -l {} \;</li>
-</ul>
+						<p>Use a shell that has key-bindings (<code>set -o emacs</code>, <code>set -o vi</code>).</p>
+<p>emacs-mode has (<code>^N, ^P</code>); vi-mode has <code>&lt;ESC&gt; j/k</code>.  See documentation.</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-18" class="content">
-						<h1>Change a file&#8217;s contents</h1>
-<ul>
-	<li>and print it out&#8230;. perl -pe &#8216;s#foo#bar#g&#8217; file.txt</li>
-	<li>and change it in the file&#8230;perl -i -pe &#8216;s#foo#bar#g&#8217; file.txt # this is silent!</li>
-	<li>Gives you the full power of perl&#8217;s regex engine (same as Python, Ruby, not same as emacs!)</li>
-</ul>
+						<p>Use a shell that uses the <code>TAB</code> key to expand paths, at the least</p>
+<p>Bash can expand variables (see Secret 2), and zsh can expand <i>even</i> network hosts defined in <code>/etc/hosts</code>!</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-19" class="content">
-						<h1>Transform a columnar list into a single row</h1>
-<ul>
-	<li>xargs</li>
-</ul>
+						<h1>Secret 2:  Take advantage of shell built-in variables</h1>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-20" class="content">
-						<h1>Exponentiate power with &#8220;|&#8221;</h1>
-<ol>
-	<li>&#8220;Find all the java files&#8221;</li>
-	<li>&#8220;Find all the java files that contain the word package&#8221;</li>
-	<li>&#8220;Find all the java files that contain the word package, case insensitively, and find the size of that file&#8221;</li>
-</ol>
+						<p><strong>~</strong> (home)</p>
+<p><code>cd ~</code><br />
+<code>ls ~/*.war</code></p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-21" class="content">
-						<h1>Bonus:  Use vi properly</h1>
-<h4>When I see improper &#8216;vi&#8217; use I die a little inside</h4>
-<h4>Use &#8216;vim&#8217; (alias vi to vim!)</h4>
+						<p>Set a variable for places you need to go often ($TC_HOME)</p>
+<p><code>export TC_HOME=/opt/larry/barry/long/path/I/hate/to/type</code><br />
+<code>cd $TC_HOME</code></p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-22" class="content">
-						<ul>
-	<li>vi (file)</li>
-	<li>vi +32 (file) edit, starting at line 32</li>
-	<li>Go to the start/end (gg/G)</li>
-	<li>Start typing at a line under this one: o</li>
-	<li>Start typing at a line above this one: O</li>
-	<li>Go to the start/end of a line (^/$)</li>
-	<li>Go to line 33:  33G</li>
-	<li>Go forward a word (w)</li>
-	<li>Do something n-times (n[something])</li>
-	<li>Write macros to do complex work (qa: to create a macro, @a to run macro &#8216;a&#8217;)</li>
-</ul>
+						<p>Stack variables for maximum flexibility</p>
+<p><code>mv $TC_HOME/*.mov ~</code></p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-23" class="content">
-						<p>If it takes you more than 3 keystrokes, you&#8217;re probably doing it wrong</p>
+						<p><strong>!!</strong></p>
+<p>Re&euml;xecute the previous command</p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-24" class="content">
-						<h1>Use screen</h1>
-<h2>Get the power of many terminals in one, leave terminals resident</h2>
+						<p><strong>!$</strong> (Previous command&#8217;s argument)</p>
+<p><code>ls /etc/hosts</code><br />
+<code>vi !$</code></p>
 					</div>
 				</div>
 			
 				<div class="">
           <div title="" id="slide-25" class="content">
+						<p><strong>$</strong>* (The arguments)</p>
+<p>Best used in <strong>functions</strong>, see Secret 3</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-26" class="content">
+						<h1 style="text-align:center;">#</h1>
+<p>A comment!  Store something to recall later!  Handy for cut and pasting</p>
+<p><code>mv /opt/foo/bar/bin bat</code></p>
+<p><i>And then you realize you need to scroll back in history copy and paste something</i></p>
+<p><code>#mv /opt/foo/bar/bin bat &lt;ENTER&gt;</code><br />
+<i>(do scroll, copy)</i><br />
+<i>(recover commented out mv command)</i><br />
+<code>mv /opt/foo/bar/bin bat (paste)&lt;ENTER&gt;</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-27" class="content">
+						<p><strong>!(match)</strong> &#8211; execute a historical command that started with (match)</p>
+<p><code>mv /tmp/larry /opt/some/long/path</code><br />
+<em>(do several vi edits)</em><br />
+<em>(someone scp&#8217;s a new /tmp/larry)</em><br />
+<code>!mv</code> #re&euml;xecutes the mv, above</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-28" class="content">
+						<p>Advanced:  Execute a subshell and insert its result: <strong>``</strong></p>
+<p><code>vim -O `find . -name pom.xml|xargs` # see Secret #10</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-29" class="content">
+						<h1>Use &#8216;cd&#8217; properly (in bash)</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-30" class="content">
+						<p><strong>cd</strong> (go home)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-31" class="content">
+						<p><strong>cd ~/bin</strong> (go to $<span class="caps">HOME</span>/bin)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-32" class="content">
+						<p><strong>cd ..</strong> (go up a directory)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-33" class="content">
+						<p><strong>cd ../../..</strong> (go up three directories)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-34" class="content">
+						<p><strong>cd -</strong> (go to the last directory, as a toggle, do it twice you&#8217;ll be back where you started)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-35" class="content">
+						<h1>Secret 3:  Create bash functions to do work you need to do often</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-36" class="content">
+						<p>Remember, you&#8217;re in a debugger + console.  Create functions to speed things up <em>at the command line</em></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-37" class="content">
+						<p>Simple functions may be better expressed as an alias</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-38" class="content">
+						<p>Combine functions with built-in variables</p>
+<pre><code>function zazzle(){ echo "A zazzle is summoned!" }
+alias ll="ls -l"</code></pre>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-39" class="content">
+						<h1>Secret 4:  Use awk to extract columnar data; sed to change tokens in the <span class="caps">STDOUT</span> stream</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-40" class="content">
+						<p>print the 5th column, file sizes</p>
+<p><code>ls -l | awk '{print $5}'</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-41" class="content">
+						<p>Use simple sed to do simple tranforms</p>
+<p><code>ls | sed s/xml/XML/</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-42" class="content">
+						<h1>Secret 5:  Use pagers, or pager-like things properly</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-43" class="content">
+						<p><strong>more</strong> sucks, use <strong>less</strong> [use an alias?  See Secret 3]</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-44" class="content">
+						<p><strong>head</strong> (gets the top five rows in a list)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-45" class="content">
+						<p><strong>tail</strong> (gets the last five rows in a list)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-46" class="content">
+						<p><strong>sort</strong> (sorts ASCIIbetically)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-47" class="content">
+						<p><strong>sort -n</strong> (sorts numerically)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-48" class="content">
+						<p><strong>sort -nr</strong> (reverses the above)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-49" class="content">
+						<p><strong>uniq</strong></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-50" class="content">
+						<p><code>sort</code> + <code>uniq</code> == Unique results</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-51" class="content">
+						<h1>Secret 6:  Use grep properly</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-52" class="content">
+						<p>Basic:  <strong>grep something a_file</strong></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-53" class="content">
+						<p>Try grepping case insensitively <code>-i</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-54" class="content">
+						<p>Print out the file name that had a winner if you use a wildcard e.g. <code>grep -iH zazzle</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-55" class="content">
+						<p>Get the line number where the match was found (<code>-n</code>)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-56" class="content">
+						<p><code>grep -v</code> to exclude things</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-57" class="content">
+						<h1>Secret 7:  Find a file from where you are</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-58" class="content">
+						<p>&#8220;I know it&#8217;s here somewhere&#8230;&#8221;</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-59" class="content">
+						<p><code>find . -name "*.java"</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-60" class="content">
+						<p>Advanced:  Use -exec to do something to the result&#8230;.<br />
+<code>find . -name "*.java" -exec ls -l {} \;</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-61" class="content">
+						<h1>Secret 8:  Change a file&#8217;s contents</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-62" class="content">
+						<p>and print it out&#8230;. <code>perl -pe 's#foo#bar#g'</code> file.txt</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-63" class="content">
+						<p>and change it in the file&#8230;<code>perl -i -pe 's#foo#bar#g' file.txt</code> <br />
+<i>This change is silent!</i></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-64" class="content">
+						<p>Gives you the full power of perl&#8217;s regex engine (same as Python, Ruby, not same as emacs!)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-65" class="content">
+						<h1>Secret 9:  Transform a columnar list into a single row</h1>
+<p><code>ls -1 /etc |xargs</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-66" class="content">
+						<h1>Secret 10:  Exponentiate power with &#8220;|&#8221;</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-67" class="content">
+						<p>&#8220;Find all the java files (See Secret 7)&#8221;</p>
+<p><code>find . -name "*.java*"</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-68" class="content">
+						<p>&#8220;Find all the java files that contain the word &#8216;package&#8217;, get those files&#8217; names and where &#8216;package&#8217; occurred in that file&#8221;</p>
+<p><code>find . -name "*.java*" -exec grep -Hni package {} \;</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-69" class="content">
+						<p>&#8220;Find all the java files that contain the word package, case insensitively, and find the size of those file&#8221;</p>
+<p><code>ls -l `find . -name "*.java*" -exec grep -Hi package {} \; |awk -F : '{print $1}'|xargs`|awk '{print $5}'</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-70" class="content">
+						<p>&#8230;and edit them with vim?</p>
+<p><code>vim `find . -name "*.java*" -exec grep -Hi package {} \; |grep -v svn|awk -F : '{print $1}'|xargs`</code></p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-71" class="content">
+						<h1>Bonus:  Use vi properly</h1>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-72" class="content">
+						<h4>When I see improper &#8216;vi&#8217; use I die a little inside</h4>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-73" class="content">
+						<h4>Use &#8216;vim&#8217; (alias vi to vim!)</h4>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-74" class="content">
+						<table>
+	<tr>
+		<th>Command </th>
+		<td> _. Effect</td>
+	</tr>
+	<tr>
+		<td>vi (file) </td>
+		<td> Edits a file</td>
+	</tr>
+	<tr>
+		<td>vi +32 (file) </td>
+		<td> Edit, starting at line 32</td>
+	</tr>
+	<tr>
+		<td> (gg/G) </td>
+		<td> Go to the start/end</td>
+	</tr>
+	<tr>
+		<td>o</td>
+		<td>Start typing at a line under this one: o</td>
+	</tr>
+	<tr>
+		<td>O</td>
+		<td>Start typing at a line above this one: O</td>
+	</tr>
+	<tr>
+		<td>A</td>
+		<td>Start typing at end of line</td>
+	</tr>
+	<tr>
+		<td>I</td>
+		<td>Start typing at beginning of line</td>
+	</tr>
+	<tr>
+		<td> (^/$)</td>
+		<td>Go to the start/end of a line</td>
+	</tr>
+	<tr>
+		<td>33G</td>
+		<td>Go to line 33</td>
+	</tr>
+	<tr>
+		<td>w</td>
+		<td>Go forward a word</td>
+	</tr>
+	<tr>
+		<td> (n[something])</td>
+		<td>Do something n-times</td>
+	</tr>
+</table>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-75" class="content">
+						<p>|Write macros to do complex work (<code>qa</code>: to create a macro named &#8216;a&#8217;, <code>@a</code> to run macro &#8216;a&#8217;)</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-76" class="content">
+						<p>If it takes you more than 3 keystrokes, you&#8217;re probably doing it wrong</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-77" class="content">
+						<p>Investing time in using an editor well will awe your peers and save you tons of time.  Really, ask someone, look at cheat-sheets, ask me.  Just get better.</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-78" class="content">
+						<h1>Use <span class="caps">GNU</span> screen</h1>
+<h2>Get the power of many terminals in one, leave terminals resident on stable servers.  It&#8217;s worth your time to read <a href="http://jmcpherson.org/screen.html">this tutorial</a>.</h2>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-79" class="content">
 						<p>When you sense that there&#8217;s &#8220;gotta be a better way&#8221; invest in efficiency.  Life is too short for bad process.</p>
+					</div>
+				</div>
+			
+				<div class="">
+          <div title="" id="slide-80" class="content">
+						<p><a href="http://github.com/sgharms/unix-efficiency-slides/">Slides at Github</a><br />
+<i>stharms@cisco.com</i></p>
 					</div>
 				</div>
 			

@@ -11,177 +11,379 @@ h2.  (stharms@cisco.com)
 h1.  I dislike inefficiency.
 
 !SLIDE
-h1.  Proof:
+h1=.  Proof:
 
 !SLIDE
-h1.  Dvorak Keyboard
-!http://stevengharms.com/wp-content/uploads/2007/04/dvorak.gif(Dvorak Keyboard)!
+h1=.  Dvorak Keyboard
 
-* 1.5 miles for your fingers Dvorak v. QWERTY
-* The shortcut that gets you home
+p=. !http://stevengharms.com/wp-content/uploads/2007/04/dvorak.gif(Dvorak Keyboard)!
+
+Notice the vowels under your left hand home row and the "Wheel of Fortune" consonants under your right?
+
+!SLIDE 
+
+What about the shortcut home that gets you home __just 5 minutes__ faster?
 
 !SLIDE
 
 h1.  Inefficiency Hurts over the Long-Term
 
+!SLIDE
+
+It hurts every day
+
+!SLIDE
+
+...And it never stops hurting
+
+!SLIDE
+
 ...add up all those minuscule inefficiencies that you do tens, hundreds, thousands of time per day and the results are surprising
 
 !SLIDE
+h1. My Cisco Career Has Involved a Lot of Typing
 
-h1.  It hurts every day
-
-!SLIDE
-
-h1.  ...And it never stops hurting
-
-!SLIDE
-h1. Cisco Career
-
-* Started in engineering support, lotta typing, lotta XTerm (er, dtterm)
-* Sysadmin for email team: lotta typing, searching, saving bits of text
-* Terminal addict
+Doing it wrong over a an extended time period means __days__ of life lost, seriously.
 
 !SLIDE
 
-Some magic spells that will help you shave off time from your regular CLI usage
+Started in engineering support, lotta typing, lotta XTerm (er, dtterm)
+
+!SLIDE 
+
+Sysadmin for email team: lotta typing, searching, saving bits of text
+
+!SLIDE
+
+h1.  Sharing is Caring
+
+Here are some magic spells that will help you shave off time from your regular CLI usage
 
 !SLIDE
 
 h1.  Measurement
 
+When you need to measure how many characters you counted, use *wc*:
+
 bq. wc (-c|-l) (word count, count the bytes / lines)
 
 !SLIDE
 
-h1.  Use a decent shell (bash, zsh)
-
-* Your shell is, in fact, a debugger session with a breakpoint at each carriage return
-* You do this in $PROGRAMMING_LANG all day, do it in the shell, too
-* Something that has key-bindings (set -o emacs, set -o vi)
-* Something that uses the TAB key to expand paths, at the least
+h1.  Secret 1:  Use a decent shell (bash, zsh)
 
 !SLIDE
 
-h1.  Take advantage of shell built-in variables
+Your shell is, in fact, a debugger session with a breakpoint at each carriage return.
 
-* *~* (home)
-* Set a variable for places you need to go often ($TC_HOME)
-* Stack variables for maximum flexibility ($TC_BIN=$TC_HOME/bin)
-* *!!* (Previous command line)
-* *!$* (Previous command's arguments)
-* *$** (The arguments)
-* *#* (store something to recall later!  Handy for cut and pasting) 
-* *!(match)* - execute a historical command that started with (match)
-* Advanced:  Execute a subshell and insert its result: *``*
+
+!SLIDE
+
+You do this in pre. @$PROGRAMMING_LANG@ all day, do it in the shell, too
+
+!SLIDE
+
+Use a shell that has key-bindings (@set -o emacs@, @set -o vi@).  
+
+emacs-mode has (@^N, ^P@); vi-mode has @<ESC> j/k@.  See documentation.
+
+
+!SLIDE
+
+Use a shell that uses the @TAB@ key to expand paths, at the least
+
+Bash can expand variables (see Secret 2), and zsh can expand __even__ network hosts defined in @/etc/hosts@!
+
+!SLIDE
+
+h1.  Secret 2:  Take advantage of shell built-in variables
+
+!SLIDE
+
+*~* (home)
+
+@cd ~@
+@ls ~/*.war@
+
+!SLIDE
+
+Set a variable for places you need to go often ($TC_HOME)
+
+@export TC_HOME=/opt/larry/barry/long/path/I/hate/to/type@
+@cd $TC_HOME@
+
+!SLIDE
+
+Stack variables for maximum flexibility
+
+@mv $TC_HOME/*.mov ~@
+
+!SLIDE
+
+*!!* 
+
+Re&euml;xecute the previous command
+
+!SLIDE
+
+*!$* (Previous command's argument)
+
+@ls /etc/hosts@
+@vi !$@
+
+!SLIDE
+
+*$** (The arguments)
+
+Best used in *functions*, see Secret 3
+
+!SLIDE
+
+h1=. #
+
+A comment!  Store something to recall later!  Handy for cut and pasting
+
+@mv /opt/foo/bar/bin bat@
+
+__And then you realize you need to scroll back in history copy and paste something__
+
+@#mv /opt/foo/bar/bin bat <ENTER>@
+__(do scroll, copy)__
+__(recover commented out mv command)__
+@mv /opt/foo/bar/bin bat (paste)<ENTER>@
+
+
+!SLIDE
+
+*!(match)* - execute a historical command that started with (match)
+
+@mv /tmp/larry /opt/some/long/path@
+_(do several vi edits)_
+_(someone scp's a new /tmp/larry)_
+@!mv@ #re&euml;xecutes the mv, above
+
+!SLIDE
+
+Advanced:  Execute a subshell and insert its result: *``*
+
+@vim -O `find . -name pom.xml|xargs` # see Secret #10@
 
 !SLIDE
 
 h1.  Use 'cd' properly (in bash)
 
-* *cd* (go home)
-* *cd ~/bin* (go to $HOME/bin)
-* *cd ..* (go up a directory)
-* *cd ../../..* (go up three directories)
-* *cd -* (go to the last directory, as a toggle)
+!SLIDE
+
+*cd* (go home)
 
 !SLIDE
 
-h1.  Create bash functions to do work you need to do often
-
-* Remember, you're in a debugger + console.  Create functions to speed things up _at the command line_
-* Simple functions may be better expressed as an alias 
-* Combine functions with built-in variables
-
-<div class="code">function zazzle(){ echo "A zazzle is summoned!" }<br/>
-alias ll="ls -l"</div>
-
-
+*cd ~/bin* (go to $HOME/bin)
 
 !SLIDE
 
-h1.  Use awk to extract columnar data
-
-* print the 5th column, file sizes
-* Use simple sed to do simple tranforms
-
-<div class="code">ls -l | awk '{print $5}'
-ls | sed s/xml/XML/
-</div>
+*cd ..* (go up a directory)
 
 !SLIDE
 
-h1.  Use pagers, or pager-like things properly
-
-* *more*
-* *more* sucks, use *less* [use an alias?]
-* *head* (gets the top five rows in a list)
-* *tail* (gets the last five rows in a list)
-* *sort*
-* *uniq*
-* sort + uniq == Unique results
+*cd ../../..* (go up three directories)
 
 !SLIDE
 
-h1.  Use grep properly
-
-* Basic:  *grep something a_file*
-* Try grepping case insensitively -i
-* Print out the file name that had a winner if you use a wildcard e.g. grep -iH zazzle *
-* Get the line number where the match was found (-n)
-* grep -v to exclude things
+*cd -* (go to the last directory, as a toggle, do it twice you'll be back where you started)
 
 !SLIDE
 
-h1.  Find a file from where you are 
+h1.  Secret 3:  Create bash functions to do work you need to do often
 
-h2.  "I know it's here somewhere..."
+!SLIDE
 
-* *find . -name "*.java"*
-* Advanced:  Use -exec to do something to the result....
-	find . -name "*.java" -exec ls -l {} \;
+Remember, you're in a debugger + console.  Create functions to speed things up _at the command line_
+
+!SLIDE
+
+Simple functions may be better expressed as an alias 
+
+!SLIDE
+
+Combine functions with built-in variables
+
+bc. function zazzle(){ echo "A zazzle is summoned!" }
+alias ll="ls -l"
+
+!SLIDE
+
+h1.  Secret 4:  Use awk to extract columnar data; sed to change tokens in the STDOUT stream
+
+!SLIDE
+
+print the 5th column, file sizes
+
+@ls -l | awk '{print $5}'@
+
+!SLIDE
+
+Use simple sed to do simple tranforms
+
+@ls | sed s/xml/XML/@
+
+!SLIDE
+
+h1.  Secret 5:  Use pagers, or pager-like things properly
+
+!SLIDE
+
+*more* sucks, use *less* [use an alias?  See Secret 3]
+
+!SLIDE
+
+*head* (gets the top five rows in a list)
+
+!SLIDE
+
+*tail* (gets the last five rows in a list)
+
+!SLIDE
+
+*sort* (sorts ASCIIbetically)
+
+!SLIDE
+
+*sort -n* (sorts numerically)
+
+!SLIDE
+
+*sort -nr* (reverses the above)
+
+!SLIDE
+
+*uniq*
+
+!SLIDE
+
+@sort@ + @uniq@ == Unique results
+
+!SLIDE
+
+h1.  Secret 6:  Use grep properly
+
+!SLIDE
+
+Basic:  *grep something a_file*
+
+!SLIDE
+
+Try grepping case insensitively @-i@
+
+!SLIDE
+
+Print out the file name that had a winner if you use a wildcard e.g. @grep -iH zazzle@ 
+
+!SLIDE
+
+Get the line number where the match was found (@-n@)
+
+!SLIDE
+
+@grep -v@ to exclude things
+
+!SLIDE
+
+h1.  Secret 7:  Find a file from where you are 
+
+!SLIDE
+
+"I know it's here somewhere..."
+
+!SLIDE
+
+@find . -name "*.java"@
+
+!SLIDE
+
+Advanced:  Use -exec to do something to the result....
+@find . -name "*.java" -exec ls -l {} \;@
 	
 !SLIDE
 
-h1.  Change a file's contents
-
-* and print it out.... perl -pe 's#foo#bar#g' file.txt
-* and change it in the file...perl -i -pe 's#foo#bar#g' file.txt # this is silent!
-* Gives you the full power of perl's regex engine (same as Python, Ruby, not same as emacs!)
+h1.  Secret 8:  Change a file's contents
 
 !SLIDE
 
-h1.  Transform a columnar list into a single row
-
-* xargs
+and print it out.... @perl -pe 's#foo#bar#g'@ file.txt
 
 !SLIDE
 
-h1.  Exponentiate power with "|"
+and change it in the file...@perl -i -pe 's#foo#bar#g' file.txt@ 
+__This change is silent!__
 
-# "Find all the java files"
-# "Find all the java files that contain the word package"
-# "Find all the java files that contain the word package, case insensitively, and find the size of that file"
+!SLIDE
+
+Gives you the full power of perl's regex engine (same as Python, Ruby, not same as emacs!)
+
+!SLIDE
+
+h1.  Secret 9:  Transform a columnar list into a single row
+
+@ls -1 /etc |xargs@
+
+!SLIDE
+
+h1.  Secret 10:  Exponentiate power with "|"
+
+!SLIDE
+
+"Find all the java files (See Secret 7)"
+
+@find . -name "*.java*"@
+
+!SLIDE
+
+"Find all the java files that contain the word 'package', get those files' names and where 'package' occurred in that file"
+
+@find . -name "*.java*" -exec grep -Hni package {} \;@
+
+!SLIDE
+
+"Find all the java files that contain the word package, case insensitively, and find the size of those file"
+
+@ls -l `find . -name "*.java*" -exec grep -Hi package {} \; |awk -F : '{print $1}'|xargs`|awk '{print $5}'@
+
+!SLIDE
+
+...and edit them with vim?
+
+@vim `find . -name "*.java*" -exec grep -Hi package {} \; |grep -v svn|awk -F : '{print $1}'|xargs`@
 
 !SLIDE
 
 h1.  Bonus:  Use vi properly
 
+!SLIDE
+
 h4.  When I see improper 'vi' use I die a little inside
+
+!SLIDE
 
 h4.  Use 'vim' (alias vi to vim!)
 
 !SLIDE
 
-* vi (file)
-* vi +32 (file) edit, starting at line 32
-* Go to the start/end (gg/G)
-* Start typing at a line under this one: o
-* Start typing at a line above this one: O
-* Go to the start/end of a line (^/$)
-* Go to line 33:  33G
-* Go forward a word (w)
-* Do something n-times (n[something])
-* Write macros to do complex work (qa: to create a macro, @a to run macro 'a')
+|_. Command | _. Effect|
+|vi (file) | Edits a file|
+|vi +32 (file) | Edit, starting at line 32|
+| (gg/G) | Go to the start/end|
+|o|Start typing at a line under this one: o|
+|O|Start typing at a line above this one: O|
+|A|Start typing at end of line|
+|I|Start typing at beginning of line|
+| (^/$)|Go to the start/end of a line|
+|33G|Go to line 33|
+|w|Go forward a word|
+| (n[something])|Do something n-times|
+
+!SLIDE
+
+|Write macros to do complex work (@qa@: to create a macro named 'a', @@a@ to run macro 'a')
 
 !SLIDE
 
@@ -189,11 +391,19 @@ If it takes you more than 3 keystrokes, you're probably doing it wrong
 
 !SLIDE
 
-h1.  Use screen 
+Investing time in using an editor well will awe your peers and save you tons of time.  Really, ask someone, look at cheat-sheets, ask me.  Just get better.
 
-h2.  Get the power of many terminals in one, leave terminals resident
+!SLIDE
+
+h1.  Use GNU screen 
+
+h2.  Get the power of many terminals in one, leave terminals resident on stable servers.  It's worth your time to read "this tutorial":http://jmcpherson.org/screen.html.
 
 !SLIDE
 
 When you sense that there's "gotta be a better way" invest in efficiency.  Life is too short for bad process.
 
+!SLIDE
+
+"Slides at Github":http://github.com/sgharms/unix-efficiency-slides/
+__stharms@cisco.com__
